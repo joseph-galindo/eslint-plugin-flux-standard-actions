@@ -2,11 +2,11 @@
 
 var FILE_NAME = 'actions/action.js';
 
-var rule = require('../rules/plain-object'),
+var rule = require('../rules/object-meets-standard'),
     RuleTester = require('eslint').RuleTester;
 
 var ruleTester = new RuleTester();
-ruleTester.run('plain-object', rule, {
+ruleTester.run('object-meets-standard', rule, {
     valid: [
         {
             code: 'function someAction() { return { type: "actionType" }; }',
