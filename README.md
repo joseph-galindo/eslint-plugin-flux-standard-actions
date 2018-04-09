@@ -1,16 +1,15 @@
-# eslint-plugin-flux-standard-actions
+# eslint-plugin-fsa
 
 This is an ESLint plugin, that restricts developers from writing custom actions for flux. The main purpose is to use human friendly standard action creators.
 
 ## Installing
 
-`npm install eslint-plugin-flux-standard-actions --save-dev`
+`npm install eslint-plugin-fsa --save-dev`
 
 ## ESLint Rules
-There are two rules in the plugin:
+There is one rule in the plugin:
 
-* plain-object: checks if action function returns just plain object.
-* create-action-function: checks is action is created with help of [standard action creator](https://github.com/rstuven/fsa-creator/).
+* object-meets-standard: checks if action functions return an object that meets the [Flux Standard Action](https://github.com/redux-utilities/flux-standard-action) standard.
 
 ## Sample Configuration File
 
@@ -18,9 +17,9 @@ Here's a sample ESLint configuration file that activates these rules:
 
 ```
 {
-    "extends": "plugin:flux-standard-actions/recommended",
+    "extends": "plugin:fsa/recommended",
     "plugins": [
-        "flux-standard-actions"
+        "fsa"
     ]
 }
 ```
@@ -29,11 +28,10 @@ Or turn rules one by one:
 ```
 {
     "plugins": [
-        "flux-standard-actions"
+        "fsa"
     ],
     "rules": {
-    	"flux-standard-actions/plain-object": 2,
-    	"flux-standard-actions/create-action-function": 2    
+    	"fsa/object-meets-standard": 2
     }
 }
 ```
