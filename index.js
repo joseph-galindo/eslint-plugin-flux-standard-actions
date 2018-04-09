@@ -1,16 +1,14 @@
 'use strict';
 
 var rules = exports.rules = {
-  'plain-object': require('./rules/plain-object'),
-  'create-action-function': require('./rules/create-action-function')
+  'object-meets-standard': require('./lib/rules/object-meets-standard')
 }
 
 
 var rules = exports.configs = {
     recommended: {
         rules: {
-                'flux-standard-actions/plain-object': 2,
-                'flux-standard-actions/create-action-function': 2,
+            'fsa/object-meets-standard': 2
         }
     }
 }
