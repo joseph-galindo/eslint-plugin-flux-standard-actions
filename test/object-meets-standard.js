@@ -1,5 +1,6 @@
 'use strict';
 
+// foo
 var FILE_NAME = 'actions/action.js';
 
 var rule = require('../rules/object-meets-standard'),
