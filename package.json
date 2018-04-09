@@ -3,6 +3,9 @@
   "version": "1.0.10",
   "description": "Flux standard action rules for ESLint",
   "author": "Anna Osyatnik <aosyatnik@amcbridge.biz>",
+  "contributors": [
+    "Joseph Galindo <joseph.galindo18@gmail.com>"
+  ],
   "license": "ISC",
   "keywords": [
     "FSA",
