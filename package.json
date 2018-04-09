@@ -4,6 +4,7 @@
   "description": "Flux standard action rules for ESLint",
   "author": "Anna Osyatnik <aosyatnik@amcbridge.biz>",
   "contributors": [
+    "Aria Stewart",
     "Joseph Galindo <joseph.galindo18@gmail.com>"
   ],
   "license": "ISC",
