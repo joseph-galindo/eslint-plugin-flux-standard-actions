@@ -23,8 +23,5 @@
   "scripts": {
     "test": "mocha"
   },
-  "repository": "https://github.com/aosyatnik/eslint-plugin-flux-standard-actions.git",
-  "dependencies": {
-    "eslint": "^4.19.1"
-  }
+  "repository": "https://github.com/aosyatnik/eslint-plugin-flux-standard-actions.git"
 }
