@@ -1,12 +1,12 @@
 'use strict';
 
-// foo
-var FILE_NAME = 'actions/action.js';
+const rule = require('../../../lib/rules/object-meets-standard');
+const RuleTester = require('eslint').RuleTester;
 
-var rule = require('../rules/object-meets-standard'),
-    RuleTester = require('eslint').RuleTester;
+// FILE_NAME is needed since the rule only looks at files inside an actions/ directory.
+const ruleTester = new RuleTester();
+const FILE_NAME = 'actions/action.js';
 
-var ruleTester = new RuleTester();
 ruleTester.run('object-meets-standard', rule, {
     valid: [
         {

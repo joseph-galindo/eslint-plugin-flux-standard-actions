@@ -22,7 +22,7 @@
     "eslint": ">=2.0.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha tests/**/*.js"
   },
   "repository": "https://github.com/aosyatnik/eslint-plugin-flux-standard-actions.git"
 }
