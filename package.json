@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-fsa",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Flux standard action rules for ESLint",
   "author": "Anna Osyatnik <aosyatnik@amcbridge.biz>",
   "contributors": [
@@ -15,8 +15,10 @@
     "eslint-plugin",
     "flux"
   ],
+  "dependencies": {
+    "flux-standard-action": "^2.0.1"
+  },
   "devDependencies": {
-    "flux-standard-action": "^2.0.1",
     "mocha": "^3.1.2"
   },
   "peerDependencies": {
