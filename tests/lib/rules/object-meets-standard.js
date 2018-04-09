@@ -23,9 +23,19 @@ ruleTester.run('object-meets-standard', rule, {
                         payload: 'my_payload'
                     };
                 };
-                const thing = 'x';
 
-                export { myAction, thing };
+                export { myAction };
+            `,
+            filename: FILE_NAME
+        },
+        {
+            code: `
+                export const myAction = () => {
+                    return {
+                        type: 'MY_ACTION_TYPE',
+                        payload: 'my_payload'
+                    };
+                };
             `,
             filename: FILE_NAME
         }
@@ -33,9 +43,38 @@ ruleTester.run('object-meets-standard', rule, {
 
     invalid: [
         {
-            code: 'function someAction() { var type = "actionType"; return { type: type }; }',
+            code: `
+                const myAction = () => {
+                    return {
+                        type: 'MY_ACTION_TYPE',
+                        payload: 'my_payload',
+                        incorrectProp: 'This prop is not FSA-compliant.'
+                    };
+                };
+
+                export { myAction };
+            `,
             filename: FILE_NAME,
-            errors: [ { message: 'No code except plain action object is allowed.' } ]
+            errors: [
+                {
+                    message: 'The action creator does not return an FSA-compliant object.'
+                }
+            ]
+        },
+        {
+            code: `
+                const myAction = () => {
+                    return 7;
+                };
+
+                export { myAction };
+            `,
+            filename: FILE_NAME,
+            errors: [
+                {
+                    message: 'Action creators must return an object expression.'
+                }
+            ]
         }
     ]
 });
