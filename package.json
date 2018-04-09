@@ -18,10 +18,13 @@
     "mocha": "^3.1.2"
   },
   "peerDependencies": {
-    "eslint": ">=2.0.0 <4.0.0"
+    "eslint": ">=2.0.0"
   },
   "scripts": {
     "test": "mocha"
   },
-  "repository": "https://github.com/aosyatnik/eslint-plugin-flux-standard-actions.git"
+  "repository": "https://github.com/aosyatnik/eslint-plugin-flux-standard-actions.git",
+  "dependencies": {
+    "eslint": "^4.19.1"
+  }
 }
