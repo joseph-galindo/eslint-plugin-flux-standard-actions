@@ -27,5 +27,8 @@
   "scripts": {
     "test": "mocha tests/**/*.js"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "repository": "https://github.com/joseph-galindo/eslint-plugin-fsa"
 }
